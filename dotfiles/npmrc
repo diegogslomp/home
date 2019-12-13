@@ -1,0 +1,2 @@
+# npm config set ignore-scripts true
+ignore-scripts=true

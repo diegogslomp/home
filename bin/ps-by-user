@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo ps -eo user=|sort|uniq -c|sort -rn

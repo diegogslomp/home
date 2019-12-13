@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+usage() {
+  printf -- "print-colored v0.0.1\n\n"
+  printf -- "Usage: print-colored [success|error|warning|debug|output|ok|nok|err|warn|out] 'message with spaces'\n\n"
+  printf -- "Examples:\n\n"
+  print_colored "normal message"
+  print_colored "ok message" "success"
+  print_colored "nok message" "error"
+  print_colored "warning message" "warning"
+}
+
+print_colored() {
+  if [ $# -eq 1 ]; then
+    printf -- "OUTPUT: $1 \n";
+  fi
+  if [ $# -ge 2 ]; then
+    case $2 in
+      success|ok)
+        printf -- "\033[32mSUCCESS: $1 \033[0m\n"
+        ;;
+      warning|warn)
+        printf -- "\033[33mWARNING: $1 \033[0m\n"
+        ;;
+      error|err|nok)
+        printf -- "\033[31mERROR: $1 \033[0m\n";
+        ;;
+      debug)
+        printf -- "\033[37mDEBUG: $1 \033[0m\n";
+        ;;
+      *)
+        printf -- "OUTPUT: $1 \n";
+        ;;
+    esac
+  fi
+}
+
+main () {
+  if [ $# -eq 0 ]; then
+    usage
+  else
+    print_colored "$@";
+  fi
+}
+
+main "$@"
