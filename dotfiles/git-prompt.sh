@@ -1,7 +1,7 @@
 # Better PS1 for windows git bash
 # ~/.config/git/git-prompt.sh
 PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
-PS1="$PS1\[\033[38;5;9m\]\u\[\033[38;5;15m\]@\h:\[\033[38;5;6m\][\w]:"
+PS1="$PS1\[\033[38;5;9m\]\u\[\033[38;5;15m\]@\h:\[\033[38;5;6m\]\w"
 if test -z "$WINELOADERNOEXEC"
 then
 	GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
