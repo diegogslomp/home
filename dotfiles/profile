@@ -11,9 +11,10 @@ eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+alias diff='colordiff'
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
 
 # ssh-agent startup
 SSH_ENV="$HOME/.ssh/environment"
@@ -38,8 +39,11 @@ else
     start_agent;
 fi
 
-# More readable PS1
-export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# Cleaner PS1 with git branch parser
+export PS1="\[\033[31m\]\u\[\033[00m\]@\h:\[\033[36m\]\w\[\033[32m\]\$(parse_git_branch) \[\033[00m\]"
 
 # Go language path
 export GOROOT=/usr/local/go
