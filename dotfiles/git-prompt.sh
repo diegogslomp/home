@@ -16,4 +16,4 @@ then
 		PS1="$PS1"'`__git_ps1`'   # bash function
 	fi
 fi
-PS1="$PS1\[\033[38;5;15m\] "
+PS1="$PS1\[\033[00m\] "
