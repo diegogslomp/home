@@ -10,7 +10,7 @@ _help() {
 }
 
 _bat() {
-  local _VERSION='0.12.1'
+  local _VERSION='0.13.0'
   local _URL="https://github.com/sharkdp/bat/releases/download/v${_VERSION}/bat_${_VERSION}_amd64.deb"
   local _FILE='/tmp/bat_latest.deb'
   curl -L ${_URL} -o ${_FILE}
@@ -28,22 +28,12 @@ _check-dns-servers() {
   sort -h
 }
 
-_disable-ipv6() {
-  sudo cp dotfiles/disable-ipv6.conf /etc/sysctl.d/
-  sudo sysctl -p -f /etc/sysctl.d/disable-ipv6.conf
-  ip a
-  sudo egrep -q '^AddressFamily inet' /etc/ssh/sshd_config || \
-  sudo echo 'AddressFamily inet' >> /etc/ssh/sshd_config &&   \
-  sudo systemctl restart sshd
-  sudo netstat -ntulp
-}
-
 _docker() {
   curl -L https://get.docker.com | bash
 }
 
 _docker-compose() {
-  local _VERSION='1.24.1'
+  local _VERSION='1.25.4'
   local _SYSTEM="$(uname -s)-$(uname -m)"
   local _URL="https://github.com/docker/compose/releases/download/${_VERSION}/docker-compose-${_SYSTEM}"
   local _COMPOSE='/usr/local/bin/docker-compose'
@@ -53,7 +43,7 @@ _docker-compose() {
 }
 
 _go() {
-  local _VERSION='1.12.7'
+  local _VERSION='1.14.1'
   local _ZIPFILE="/usr/local/src/go${_VERSION}.linux-amd64.tar.gz"
 
   if [ ! -f ${_ZIPFILE} ]; then
@@ -70,23 +60,22 @@ _go() {
 
 _home() {
   # MOC Music Player Config
-  [ -d ~/.moc ] || mkdir ~/.moc
-  egrep -q '^Theme' ~/.moc/config > /dev/null 2>&1 || echo 'Theme = transparent-background' >> ~/.moc/config
+  mkdir ~/.moc
+  echo 'Theme = transparent-background' >> ~/.moc/config
   # Profile
-  [ -f ~/.profile ] || cat dotfiles/profile > ~/.profile
-  [ -f ~/.bash_profile ] || cat dotfiles/bash_profile > ~/.bash_profile
+  cat dotfiles/profile > ~/.profile
   # Vim config
-  [ -f ~/.vimrc ] || cat dotfiles/vimrc > ~/.vimrc
+  cat dotfiles/vimrc > ~/.vimrc
   # inputrc file for bash navigation
   cat dotfiles/inputrc > ~/.inputrc
   # bin executables folder
-  [ -d ~/bin ] || mkdir ~/bin
+  mkdir ~/bin
   cp -r bin ~/
   chmod u+x ~/bin/*
   # git configuration
   cat dotfiles/gitconfig > ~/.gitconfig
   # vscode setting
-  [ -d ~/.config/Code/User ] || mkdir -p ~/.config/Code/User
+  mkdir -p ~/.config/Code/User
   cat dotfiles/settings.json > ~/.config/Code/User/settings.json
 }
 
@@ -123,7 +112,7 @@ _vundle() {
 }
 
 _python() {
-  local _VERSION='3.7.3'
+  local _VERSION='3.8.2'
 
   sudo apt install build-essential libbz2-dev libsqlite3-dev libreadline-dev \
     zlib1g-dev libncurses5-dev libssl-dev libgdbm-dev libffi-dev -y
@@ -176,16 +165,6 @@ _youcompleteme() {
     git clone --recursive https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
     sudo ~/.vim/bundle/YouCompleteMe/install.sh
   fi
-}
-
-_woeusb() {
-  git clone https://github.com/slacka/WoeUSB.git
-  cd WoeUSB/
-  ./setup-development-environment.bash
-  mk-build-deps
-  sudo gdebi woeusb-build-deps_*.deb
-  dpkg-buildpackage -uc -b
-  sudo gdebi ../woeusb*.deb
 }
 
 [ $# -ne 1 ] && _help || "_$@"
