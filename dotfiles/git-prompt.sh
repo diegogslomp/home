@@ -1,7 +1,7 @@
 # Better PS1 for windows git bash
 # ~/.config/git/git-prompt.sh
 PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
-PS1="$PS1\[\033[38;5;9m\]\u\[\033[38;5;15m\]@\h:\[\033[38;5;6m\]\w"
+PS1="$PS1\[\033[90;1m\]\u\[\033[93;1m\]@\h:\[\033[92;1m\]\w"
 if test -z "$WINELOADERNOEXEC"
 then
 	GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
@@ -12,7 +12,7 @@ then
 	then
 		. "$COMPLETION_PATH/git-completion.bash"
 		. "$COMPLETION_PATH/git-prompt.sh"
-		PS1="$PS1"'\[\033[32m\]'  # change color to green
+		PS1="$PS1"'\[\033[91;1m\]' 
 		PS1="$PS1"'`__git_ps1`'   # bash function
 	fi
 fi
