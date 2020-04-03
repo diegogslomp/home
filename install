@@ -74,9 +74,6 @@ _home() {
   chmod u+x ~/bin/*
   # git configuration
   cat dotfiles/gitconfig > ~/.gitconfig
-  # vscode setting
-  mkdir -p ~/.config/Code/User
-  cat dotfiles/settings.json > ~/.config/Code/User/settings.json
 }
 
 _kubectl() {
