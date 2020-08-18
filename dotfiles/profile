@@ -43,7 +43,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 # Cleaner PS1 with git branch parser
-export PS1="\[\033[90;1m\]\u\[\033[93;1m\]@\h:\[\033[92m\]\w\[\033[91;1m\]\$(parse_git_branch) \[\033[00m\]"
+export PS1="\[\033[38;5;241m\]\u\[\033[38;5;12m\]@\h\[$(tput sgr0)\]:\[\033[38;5;6m\]\w\[$(tput sgr0)\]:\[\033[33m\]\$(parse_git_branch) \[$(tput sgr0)\]"
 
 # Go language path
 export GOROOT=/usr/local/go
