@@ -163,6 +163,10 @@ _youcompleteme() {
     sudo ~/.vim/bundle/YouCompleteMe/install.sh
   fi
 }
+_vim-plug() {
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
 
 [ $# -ne 1 ] && _help || "_$@"
 
