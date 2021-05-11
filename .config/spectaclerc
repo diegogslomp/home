@@ -1,0 +1,13 @@
+[General]
+lastSaveAsLocation=file:///home/diego/Downloads/
+
+[GuiConfig]
+captureModeIndex=4
+cropRegion=396,475,410,313
+includePointer=false
+lastUsedSaveMode=0
+window-position=366,224
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Downloads/Screenshot_20210504_131432.png,file:$HOME/Downloads/Screenshot_20210505_113510.png
+Recent URLs[$e]=file:$HOME/Downloads/

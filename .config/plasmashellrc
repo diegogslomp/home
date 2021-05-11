@@ -1,0 +1,33 @@
+[ActionsWidget]
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAboAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAAwAAAAAEAAAAAAAAD6AAAAABk
+
+[ConfigDialog]
+Height 1080=536
+Width 1920=608
+
+[General]
+Number of Actions=0
+
+[KFileDialog Settings]
+Recent Files[$e]=buildings-near-body-of-water-at-night-1519088.jpg,file:$HOME/Pictures/wp2967926-super-mario-world-map-wallpaper.jpg,file:$HOME/Pictures/1_z6egnhPoF5Go7xn7tbsibw.jpeg,file:$HOME/Pictures/073b9d35f636235fcc317194281fc81f.jpg
+Recent URLs[$e]=file:$HOME/Pictures/
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_kcm_workspace.desktop,1 services_kcm_pulseaudio.desktop,3 services_kcm_fonts.desktop,7 services_org.kde.dragonplayer.desktop,1 services_kwintabbox.desktop,1 services_khtml_java_js.desktop,50 services_org.kde.partitionmanager.desktop,8 services_system-config-printer.desktop,20 services_code.desktop,27 services_kwincompositing.desktop,1 shell_/opt/firefox/firefox,1 services_smb.desktop,2 services_plasma-discover --mode update,6 services_terminator.desktop,3 services_kwinactions.desktop,1 services_gimp.desktop,2 services_kcm_splashscreen.desktop,3 shell_postman,7 services_kcm_sddm.desktop,19 services_systemsettings.desktop,2 services_kcm_kscreen.desktop,2 services_kcm_lookandfeel.desktop,3 services_IRPF2020-program.desktop,4 services_google-chrome.desktop,1 services_kwinscreenedges.desktop,22 services_org.kde.kcalc.desktop,3 services_formats.desktop,5 services_kcmnotify.desktop,1 places_trash:/,17 services_screenlocker.desktop,3 services_pgadmin4.desktop,1 services_xpad.desktop,7 services_mouse.desktop,4 services_desktop.desktop,1 services_libreoffice-startcenter.desktop,3 services_steam.desktop,10 services_pgadmin3.desktop,4 services_kwinoptions.desktop,1 services_componentchooser.desktop,9 services_spotify.desktop,4 services_libreoffice-writer.desktop,1 services_kamera.desktop,1 services_user_manager.desktop,1 services_higan.desktop,19 services_kcmkwineffects.desktop,8 services_org.kde.konsole.desktop,1 services_khotkeys.desktop,1 services_kcmsmserver.desktop,5 services_style.desktop,3 services_firefox-esr.desktop,3 services_khtml_appearance.desktop,1 services_libreoffice-draw.desktop,1 services_kcm_keyboard.desktop,8 services_mgba-qt.desktop,1 services_breezedecorationconfig.desktop,3 services_kcm_desktoptheme.desktop,21 services_org.kde.kwrite.desktop,7 services_wireshark.desktop,1 services_kcm_cursortheme.desktop,3 services_clock.desktop,1 services_desktoppath.desktop,6 services_keys.desktop,1 services_org.kde.juk.desktop,20 services_virtualbox.desktop,8 services_kwindecoration.desktop,1 services_org.kde.discover.desktop,1 services_colors.desktop
+pluginWhiteList=services,places,desktopsessions,PowerDevil,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaViews][Panel 2][Horizontal1600]
+thickness=30
+
+[PlasmaViews][Panel 2][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 2][Horizontal640]
+thickness=30
+
+[ScreenConnectors]
+0=VGA-0
+1=:0.0
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/desktop-base.js

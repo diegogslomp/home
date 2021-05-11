@@ -1,0 +1,36 @@
+[CompactMode]
+FontWeight=50
+PreviewSize=16
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+Version=200
+ViewPropsTimestamp=2019,9,4,15,8,24
+
+[IconsMode]
+FontWeight=50
+PreviewSize=112
+
+[KPropertiesDialog]
+Height 1080=471
+Width 1920=433
+
+[MainWindow]
+Height 1080=855
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAACyAAADMfwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAmAAADMQAAAFoBAAADAAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAACgEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAoBAAADAAAC5QAAAzEAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1920=920
+
+[Open-with settings]
+CompletionMode=1
+History=calc
+
+[PreviewSettings]
+Plugins=audiothumbnail,comicbookthumbnail,djvuthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,svgthumbnail,webarchivethumbnail
+
+[SettingsDialog]
+Height 1080=469
+Width 1920=580

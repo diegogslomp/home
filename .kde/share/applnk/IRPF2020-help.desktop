@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Ajuda do IRPF2020
+Exec=/home/diego/ProgramasRFB/IRPF2020/xdg-open /home/diego/ProgramasRFB/IRPF2020/help/AjudaIRPF.pdf
+Icon=/home/diego/ProgramasRFB/IRPF2020/RFB.png
+OnlyShowIn=Old;

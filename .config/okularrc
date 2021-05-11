@@ -1,0 +1,26 @@
+[Desktop Entry]
+FullScreen=false
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/oldHome/Documents/ebooks/xinfra/Dale-Carnegie-How-to-win-friends-and-influence-people.pdf,file:$HOME/oldHome/Documents/personal/comprovantes/ComprovanteIRRFWebForm_2392255.pdf
+Recent URLs[$e]=file:$HOME/oldHome/Documents/personal/comprovantes/
+
+[MainWindow]
+Height 1080=1015
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAOxAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1920
+Window-Maximized 1080x1920=true
+Window-Maximized 900x1600=true
+
+[Recent Files]
+File1[$e]=$HOME/Documents/manual_permissoes.pdf
+File2[$e]=fish://diego@softwares/stg1/arquivos/distribuicao/Softwares/Especificos/Sigep/Aplicativos e Manuais_220520/Manual_do_Usuario_SigepWeb.pdf
+File3[$e]=fish://diego@softwares/stg1/arquivos/distribuicao/Softwares/Especificos/Sigep/Aplicativos e Manuais_220520/Guia_Pratico_de_Instalacao_Cliente.pdf
+File4[$e]=/media/hdd/home/diego/Documents/ebooks/redes/Administracao de Redes.pdf
+File5[$e]=/media/hdd/home/diego/Documents/personal/comprovantes/ipva2014.pdf
+Name1[$e]=manual_permissoes.pdf
+Name2[$e]=Manual_do_Usuario_SigepWeb.pdf
+Name3[$e]=Guia_Pratico_de_Instalacao_Cliente.pdf
+Name4[$e]=Administracao de Redes.pdf
+Name5[$e]=ipva2014.pdf

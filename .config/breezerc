@@ -1,0 +1,6 @@
+[Common]
+ShadowSize=ShadowNone
+
+[Windeco]
+DrawBackgroundGradient=false
+DrawSizeGrip=true

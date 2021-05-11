@@ -1,0 +1,17 @@
+[DownloadDialog Settings]
+Height 1080=494
+Width 1920=700
+
+[MainWindow]
+Height 1080=750
+Height 600=513
+Height 768=664
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAP3AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1024=922
+Width 1920=1194
+Width 800=720
+
+[PlasmaRunnerManager]
+LaunchCounts=
