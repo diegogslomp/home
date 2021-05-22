@@ -1,6 +1,9 @@
+[$Version]
+update_info=kxkb_variants.upd:split-variants
+
 [Layout]
 DisplayNames=
-LayoutList=
+LayoutList=br
 LayoutLoopCount=-1
 Model=
 ResetOldOptions=false
@@ -9,4 +12,5 @@ ShowLabel=true
 ShowLayoutIndicator=true
 ShowSingle=false
 SwitchMode=Global
-Use=false
+Use=true
+VariantList=

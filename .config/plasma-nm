@@ -1,3 +1,2 @@
 [General]
-ManageVirtualConnections=false
-UnlockModemOnDetection=true
+AirplaneModeEnabled=false

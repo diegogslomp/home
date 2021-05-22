@@ -1,38 +1,6 @@
 [Added Associations]
-application/pdf=userapp-Firefox-44VP7Z.desktop;okularApplication_pdf.desktop;libreoffice-draw.desktop;gimp.desktop;display-im6.q16.desktop;
-application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;org.kde.accountwizard.desktop;
-application/x-extension-htm=userapp-Firefox-44VP7Z.desktop;
-application/x-extension-html=userapp-Firefox-44VP7Z.desktop;
-application/x-extension-shtml=userapp-Firefox-44VP7Z.desktop;
-application/x-extension-xht=userapp-Firefox-44VP7Z.desktop;
-application/x-extension-xhtml=userapp-Firefox-44VP7Z.desktop;
-application/x-ms-dos-executable=wine.desktop;
-application/x-shellscript=org.kde.kwrite.desktop;
-application/xhtml+xml=userapp-Firefox-44VP7Z.desktop;
-audio/mpeg=org.kde.dragonplayer.desktop;
-image/png=userapp-Firefox-44VP7Z.desktop;org.kde.gwenview.desktop;
-text/html=userapp-Firefox-44VP7Z.desktop;
-text/plain=org.kde.kwrite.desktop;libreoffice-calc.desktop;org.kde.kate.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;vim.desktop;code.desktop;
-x-scheme-handler/chrome=userapp-Firefox-44VP7Z.desktop;
-x-scheme-handler/ftp=userapp-Firefox-44VP7Z.desktop;
-x-scheme-handler/http=userapp-Firefox-44VP7Z.desktop;
-x-scheme-handler/https=userapp-Firefox-44VP7Z.desktop;
-image/jpeg=userapp-Firefox-44VP7Z.desktop;
+inode/directory=org.kde.konsole.desktop;
 
 [Default Applications]
-application/pdf=okularApplication_pdf.desktop;
-application/x-extension-htm=userapp-Firefox-44VP7Z.desktop
-application/x-extension-html=userapp-Firefox-44VP7Z.desktop
-application/x-extension-shtml=userapp-Firefox-44VP7Z.desktop
-application/x-extension-xht=userapp-Firefox-44VP7Z.desktop
-application/x-extension-xhtml=userapp-Firefox-44VP7Z.desktop
-application/x-ms-dos-executable=wine.desktop;
-application/xhtml+xml=userapp-Firefox-44VP7Z.desktop
-audio/mpeg=org.kde.dragonplayer.desktop;
-text/html=userapp-Firefox-44VP7Z.desktop
-text/plain=org.kde.kwrite.desktop;
-x-scheme-handler/chrome=userapp-Firefox-44VP7Z.desktop
-x-scheme-handler/ftp=userapp-Firefox-44VP7Z.desktop
-x-scheme-handler/http=userapp-Firefox-44VP7Z.desktop
-x-scheme-handler/https=userapp-Firefox-44VP7Z.desktop
-x-scheme-handler/postman=Postman.desktop
+inode/directory=org.kde.konsole.desktop;
+x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop

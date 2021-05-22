@@ -1,16 +1,25 @@
 [Desktop Entry]
-DefaultProfile=Profile 4.profile
+DefaultProfile=Profile 1.profile
 
-[DownloadDialog Settings]
-Height 1080=494
-Width 1920=700
-
-[Favorite Profiles]
-Favorites=
+[KFileDialog Settings]
+detailViewIconSize=16
 
 [MainWindow]
-Height 1080=653
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAPXAAAABAAAAAQAAAAIAAAACPwAAAAA
+DP-3 Height 2560x1440=790
+DP-3 Width 2560x1440=984
+DisplayPort-2 Height 2560x1440=773
+DisplayPort-2 Height 683x512=445
+DisplayPort-2 Width 2560x1440=1052
+DisplayPort-2 Width 683x512=683
+DisplayPort-2 XPosition 2560x1440=754
+DisplayPort-2 XPosition 683x512=0
+DisplayPort-2 YPosition 2560x1440=327
+DisplayPort-2 YPosition 683x512=27
+HDMI-A-0 XPosition 2560x1440=1663
+HDMI-A-0 YPosition 2560x1440=856
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAABBwAAALnAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1920=1276
-Window-Maximized 1080x1920=true
+
+[Notification Messages]
+CloseAllTabs=true

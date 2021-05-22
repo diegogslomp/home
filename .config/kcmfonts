@@ -1,3 +1,2 @@
 [General]
-dontChangeAASettings=false
-forceFontDPI=0
+forceFontDPI=144
