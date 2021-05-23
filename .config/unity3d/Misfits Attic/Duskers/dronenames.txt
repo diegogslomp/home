@@ -1,0 +1,17 @@
+# Use at your own risk!  Some drone names may interfere with commands or introduce bugs.
+# Modifying this file may require you to start a new run ([R]eset)!
+#
+# The following are some naming considerations:
+# 	Add 1 drone name per row
+# 	The first character must be a letter (a-z/A-Z)
+# 	Illegal characters: ':', ',', '|', '='
+# 	Names longer than 10 characters will be truncated
+# 	Names cannot start with characters that may conflict with airlock, door, and room numbers (ex: myR2D2 is valid, but R2D2 is not)
+#   At least 10 names are recommended to avoid frequent duplicates, ~30-40 is ideal
+#   The # comments a line so do not put them on lines with the names
+# 
+# NAME_EX1
+# NAME_EX2  
+
+
+

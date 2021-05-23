@@ -2,6 +2,8 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage
 
 [Compositing]
+GLCore=true
+GLTextureFilter=1
 OpenGLIsUnsafe=false
 
 [Desktops]
@@ -20,6 +22,7 @@ LatitudeAuto=-29.0673
 LongitudeAuto=-50.9614
 
 [Plugins]
+blurEnabled=false
 highlightwindowEnabled=true
 kwin4_effect_fadedesktopEnabled=true
 kwin4_effect_translucencyEnabled=false

@@ -26,7 +26,6 @@ PreloadWeight=0
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=1340
-positions=1,23,desktop:/_.txt,0,0
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -34,7 +33,7 @@ Image=file:///usr/share/wallpapers/Kite/contents/images/2560x1440.jpg
 SlidePaths=/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][1][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/diego/Pictures/4k/3935156-dc-comics-wallpaper.jpg
+Image=file:///home/diego/Pictures/4k/nanpu_bridge_huangpu_river_shanghai-wide.jpg
 SlidePaths=/home/diego/Pictures/4k
 UncheckedSlides=file:///home/diego/Pictures/4k/4kblack.png,file:///home/diego/Pictures/4k/4k-resolution-wallpaper4.jpg,file:///home/diego/Pictures/4k/4K-Mountain-Resolution-Background.jpg,file:///home/diego/Pictures/4k/beautiful_peles_castle-wallpaper-3840x2160.jpg,file:///home/diego/Pictures/4k/glen_canyon_utah_arizona-wide.jpg,file:///home/diego/Pictures/4k/venice_italy_4k_5k-wide.jpg,file:///home/diego/Pictures/4k/Wallpapers 4K Ultra HD - Taringa.jpg,file:///home/diego/Pictures/4k/city_turkey_istanbul_sultanahmet_mosque_8600x5732.jpg
 
@@ -59,7 +58,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][2][Applets][3][Configuration]
-PreloadWeight=100
+PreloadWeight=97
 
 [Containments][2][Applets][3][Configuration][ConfigDialog]
 DialogHeight=840
@@ -114,7 +113,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -148,7 +147,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=20
+PreloadWeight=37
 
 [Containments][8][Applets][11][Configuration][ConfigDialog]
 DialogHeight=840
@@ -180,14 +179,14 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][15][Configuration]
-PreloadWeight=40
+PreloadWeight=37
 
 [Containments][8][Applets][16]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][16][Configuration]
-PreloadWeight=56
+PreloadWeight=63
 
 [Containments][8][Applets][17]
 immutability=1
@@ -229,7 +228,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=4
+PreloadWeight=6
 
 [Containments][8][Applets][9][Configuration][ConfigDialog]
 DialogHeight=840
@@ -252,4 +251,4 @@ knownItems=org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.k
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/_.txt,0
+screenMapping=

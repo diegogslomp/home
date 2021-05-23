@@ -1,0 +1,12 @@
+LAST_LOG_ID=5
++LOG_278593987|FILE=intro_scientist_log:LOGID=1:TYPE=0
++LOG_550489670|FILE=storyUniverse_Theory_06:LOGID=2:TYPE=1
++LOG_288386676|FILE=intro_scientist_y_log_bake:LOGID=3:TYPE=0
++greygoo|stepA=2:noteA=4
++OBJ_1877136997|FILE=GG_A_Log:TYPE=1
++LOG_1033665792|FILE=storyDusker_01_002:LOGID=4:TYPE=1
++LOG_1083445508|FILE=storyUniverse_Theory_07:LOGID=5:TYPE=1
++OBJ_1032578501|FILE=GG_ColorB1_Log:TYPE=1:ITEM=noteA_greygoo
++SAM_0|FILE=100-Doubt:TITLE=doubt
++pandemic|stepA=2
++OBJ_92928122|FILE=storyDusker_01_Holmes_intro_log:TYPE=1

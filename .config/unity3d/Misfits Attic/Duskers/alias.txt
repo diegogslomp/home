@@ -1,0 +1,2 @@
+begin=open a1;navigate all a1; generator 2; close all; status
+end=navigate 1 2 3 4 r1
