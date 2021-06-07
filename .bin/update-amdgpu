@@ -1,0 +1,6 @@
+#!/usr/bin/env bash 
+cat /var/log/**/*.log | grep -i amdgpu
+cd ~/repos/
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+sudo cp -r ~/repos/linux-firmware/amdgpu/* /lib/firmware/amdgpu/
+sudo update-initramfs -k all -u -v
