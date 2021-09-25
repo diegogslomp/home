@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+networks=$(ip route | grep kernel | awk '{print $1}')
+
+hosts=$(for network in $networks; do nmap -sn $network | grep report | awk '{ print $5 }'; done)
+
+for host in $hosts; do nmap -A -T4 $host; done

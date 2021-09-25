@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+iotop -oPa -d 2
+

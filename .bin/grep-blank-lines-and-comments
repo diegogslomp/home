@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+[[ $# -eq 1 ]] || { echo 'Needs one argument to filter!'; exit 1; }
+
+egrep -v '^\s*$|^\s*#|^\s*;|^\s*\"' $1

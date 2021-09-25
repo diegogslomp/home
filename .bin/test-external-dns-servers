@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+for dns in $(awk '{print $2 "\n" $3}' ~/bin/external-dns-servers.txt); do 
+  ping $dns -c 1 \
+  | grep icmp; 
+done \
+  | awk '{print $4 $7}' \
+  | awk -F ':time=' '{print $2 " - " $1}' \
+  | sort -h

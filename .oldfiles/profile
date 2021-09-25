@@ -1,0 +1,71 @@
+stty -ixon
+
+export HISTFILESIZE=9999
+export HISTSIZE=9999
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+
+[[ -d $HOME/bin ]] && export PATH="$PATH:$HOME/bin"
+
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
+alias diff='colordiff'
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+
+# ssh-agent startup
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+    echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# Cleaner PS1 with git branch parser
+export PS1="\[\033[38;5;241m\]\u\[\033[38;5;12m\]@\h\[$(tput sgr0)\]:\[\033[38;5;6m\]\w\[$(tput sgr0)\]:\[\033[33m\]\$(parse_git_branch) \[$(tput sgr0)\]"
+
+# Go language path
+export GOROOT=/usr/local/go
+
+[[ -d $GOROOT ]] && \
+  export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# Colored man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# Bash completion
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+# Pipenv completion
+if command -v pyenv > /dev/null 2>&1; then
+  eval "$(pipenv --completion)"
+fi
