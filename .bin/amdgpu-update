@@ -1,0 +1,18 @@
+#!/usr/bin/env bash 
+# Fix amdgpu ubuntu missing files and screen tearing
+# Show missing files
+cat /var/log/**/*.log | grep -i amdgpu
+# Download and copy missing files to system location
+cd ~/repos/
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+sudo cp -r ~/repos/linux-firmware/amdgpu/* /lib/firmware/amdgpu/
+# Update
+sudo update-initramfs -k all -u -v
+# Fix Screen Tearing (Need Reboot)
+cat <<EOF > /etc/X11/xorg.conf.d/20-amdgpu.conf
+Section "Device"
+        Identifier      "AMD Graphics"
+        Driver          "amdgpu"
+        Option          "TearFree" "true"
+EndSection
+EOF
