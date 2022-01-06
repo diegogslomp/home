@@ -1,3 +1,0 @@
-+greygoo|VIEWED=True:stepA=False:theory_greygoo=True:noteA=True
-+sam|VIEWED=True:0=False
-+pandemic|VIEWED=True:stepA=False:theory_pandemic=True
