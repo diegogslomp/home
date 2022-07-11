@@ -75,13 +75,21 @@ black='\[\e[0;30m\]'
 BLACK='\[\e[1;30m\]'
 nc='\[\e[0m\]'
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 if [ "$UID" = 0 ]; then
     PS1="$red\u$nc@$red\H$nc:$CYAN\w$nc\\n$red#$nc "
 else
-    PS1="$BLACK\w$nc "
+    PS1="$YELLOW\w$GREEN\$(parse_git_branch)$nc "
     # PS1="$black\u@\H:$BLACK\w$nc "
     # PS1="$PURPLE\u$nc@$CYAN\H$nc:$GREEN\w$nc\\n$GREEN\$$nc "
 fi
+
+# Cleaner PS1 with git branch parser
+# export PS1="\[\033[90;1m\]\u\[\033[94;1m\]@\h:\[\033[96m\]\w\[\033[92;1m\]\$(parse_git_branch) \[\033[00m\]"
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
