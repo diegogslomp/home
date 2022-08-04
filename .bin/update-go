@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+last_go_version() {
+    curl -s https://go.dev/dl/ |
+        grep linux-amd64 |
+        grep span |
+        awk -F">" '{ print $2 }' |
+        awk -F"<" '{ print $1 }'
+}
+
+print_info() {
+    echo "INFO: $1"
+}
+
+check_go_in_path() {
+    if ! echo "$PATH" | grep -q "/go/bin"; then
+        print_info "Add ${HOME}/go/bin and /usr/local/go/bin to PATH"
+    fi
+}
+
+(
+    cd ~/Downloads
+    check_go_in_path
+    go version
+
+    file=$(last_go_version)
+    if [[ ! -e "$file" ]]; then
+        wget "https://go.dev/dl/${file}"
+        sudo rm -rf /usr/local/go
+        sudo tar -C /usr/local -xzf "$file"
+    else
+        print_info "${file} already downloaded"
+    fi
+
+    go version
+)
