@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Desinstalar IRPF2021
-Exec=/home/diego/ProgramasRFB/IRPF2021/uninstall 
-Icon=/home/diego/ProgramasRFB/IRPF2021/RFB.png
-OnlyShowIn=Old;

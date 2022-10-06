@@ -1,9 +1,0 @@
-[Applications][firefox]
-Seen=true
-ShowPopups=false
-
-[Applications][org.kde.discover]
-ShowPopups=false
-
-[Services][networkmanagement]
-ShowPopups=false

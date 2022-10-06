@@ -1,7 +1,0 @@
-set completion-ignore-case on
-set show-all-if-ambiguous on
-#TAB: menu-complete
-"\e[1;5C": forward-word   # ctrl + right
-"\e[1;5D": backward-word  # ctrl + left 
-"\e[1~": beginning-of-line      # Home Key
-"\e[4~": end-of-line            # End Key

@@ -1,6 +1,0 @@
-[Added Associations]
-inode/directory=org.kde.konsole.desktop;
-
-[Default Applications]
-inode/directory=org.kde.konsole.desktop;
-x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop

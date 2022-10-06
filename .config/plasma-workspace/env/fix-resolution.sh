@@ -1,1 +1,0 @@
-/home/diego/.bin/fix-resolution.sh

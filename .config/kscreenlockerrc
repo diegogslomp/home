@@ -1,8 +1,0 @@
-[$Version]
-update_info=kscreenlocker.upd:0.1-autolock
-
-[Daemon]
-Autolock=false
-
-[Greeter][Wallpaper][org.kde.image][General]
-SlidePaths=/usr/share/plasma/wallpapers,/usr/share/wallpapers

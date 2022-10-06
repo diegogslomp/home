@@ -1,7 +1,0 @@
-[$Version]
-update_info=spectacle_newConfig.upd:spectacle-new-config
-
-[GuiConfig]
-captureMode=5
-cropRegion=107,891,1548,741
-window-position=50,0
