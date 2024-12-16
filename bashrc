@@ -43,7 +43,7 @@ BLACK='\[\e[1;30m\]'
 nc='\[\e[0m\]'
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*//'
 }
 
 if [ "$UID" = 0 ]; then
