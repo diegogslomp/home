@@ -26,12 +26,21 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# colered man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
@@ -41,15 +50,6 @@ HISTCONTROL=ignoreboth
 HISTSIZE=9999
 HISTFILESIZE=9999
 HISTTIMEFORMAT="%d/%m/%y %T "
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -75,9 +75,9 @@ parse_git_branch() {
 }
 
 if [ "$UID" = 0 ]; then
-    PS1="$red\u$nc@$red\H$nc:$CYAN\w$nc\\n$red#$nc "
+    PS1="$red\u$nc@$red\H$nc:$CYAN\W$nc\\n$red#$nc "
 else
-    PS1="$YELLOW\w$GREEN\$(parse_git_branch)$nc "
+    PS1="$YELLOW\W$GREEN\$(parse_git_branch)$nc "
 fi
 
 # enable color support of ls and also add handy aliases
@@ -97,40 +97,17 @@ alias la='ls -A'
 alias l='ls -CF'
 alias bat='batcat'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# Default parameter to send to the "less" command
+# default parameter to send to the "less" command
 # -R: show ANSI colors correctly; -i: case insensitive search
 LESS="-R -i"
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-# Add sbin directories to PATH.  This is useful on systems that have sudo
+# add sbin directories to PATH, useful on systems that have sudo
 echo $PATH | grep -Eq "(^|:)/sbin(:|)"     || PATH=$PATH:/sbin
 echo $PATH | grep -Eq "(^|:)/usr/sbin(:|)" || PATH=$PATH:/usr/sbin
 
-# Colered man pages
-export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[1;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
-
-# Go language path
+# go language path
 export GOROOT=/usr/local/go
 [[ -d $GOROOT ]] && \
   export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$HOME/go/bin
+
+cd ~/repos
